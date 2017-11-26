@@ -4,18 +4,18 @@ var halfLength = halfSpacing * 0.8;
 var x = spacing/2;
 var y = spacing/2;
 var xNum = 50;
-var yNum = 25;
+var yNum = 40;
 var numOfPixs = xNum * yNum;
 var pattern = [];
 var patternSystem = new PatternSystem(xNum, yNum);
 var pattern = patternSystem.pattern;
 var counter = 0;
-var backgroundColour = 45;
-var lineColour = 255;
+var backgroundColour = 255;
+var lineColour = 65;
 var activePixels = [];
 var activePixelIndex = [];
 
-
+console.log('hit')
 
 function setup() {
 	createCanvas(xNum * spacing, yNum * spacing);
