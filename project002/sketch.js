@@ -1,10 +1,10 @@
-var spacing = 100;
 var halfSpacing = spacing/2;
 var halfLength = halfSpacing * 0.8;
 var x = spacing/2;
 var y = spacing/2;
-var xNum = 50;
-var yNum = 40;
+var xNum = 40;
+var yNum = 25;
+var sw = 6;
 var numOfPixs = xNum * yNum;
 var pattern = [];
 var patternSystem = new PatternSystem(xNum, yNum);
@@ -23,7 +23,7 @@ function setup() {
 	background(backgroundColour);
 
 	stroke(lineColour);
-	strokeWeight(10);
+	strokeWeight(sw);
 
 	for(var i = 0, il = pattern.length; i < il; i++) {
 		var col = i % xNum;
@@ -43,7 +43,7 @@ function setup() {
 
 function draw() {
 	stroke(20,10, 100);
-	strokeWeight(10);
+	strokeWeight(sw);
 
 	for(var i = 0; i < 50; i++) {
 		if(!patternSystem.activeSets[i]) {
@@ -148,7 +148,7 @@ ActivePixel.prototype.hidePixel = function() {
 
 ActivePixel.prototype.drawPixel = function() {
 	stroke(lineColour);
-	strokeWeight(10);
+	strokeWeight(sw);
 
 	if(!this.active) {
 		if(this.end == 1) {
@@ -165,7 +165,7 @@ ActivePixel.prototype.drawPixel = function() {
 *
 */
 function binaryNumber() {
-	if(Math.random() < 0.5) return 0;
+	if(Math.random() < 0.6) return 0;
 	else return 1;
 }
 
